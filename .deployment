@@ -1,0 +1,2 @@
+[config]
+command = bash deploy_node4.sh
