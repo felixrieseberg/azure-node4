@@ -10,6 +10,8 @@ Simply include .deployment, deploy_node4.sh and iisnode.yml in your project. Don
 
 > Monitor this repository for an update as soon as a new RC or the final version of Node.js is available - you will have to update your scripts!
 
+Please note that *native modules are currently not supported*, as all published versions of npm will result in node-gyp not knowing "where to download stuff from".
+
 ## Creating a Node 4.0 Website from Scratch
 - Sign up for an Azure account. You can run up to 10 websites on Azure for free, so any account will do - for instance the [pay-as-you-go account with free trial credits](http://azure.microsoft.com/en-us/pricing/free-trial/) or the included accounts coming with [BizSpark for startups](http://www.bizspark.com) or the [GitHub Student Developer Pack](https://education.github.com/pack).
 
