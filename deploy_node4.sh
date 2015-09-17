@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # -----------------------------
-# Deploy Node v4.0.0 to Kudu
+# Deploy Node v4.1.0 to Kudu
 # -----------------------------
 
 # Helpers
@@ -93,11 +93,11 @@ selectNodeVersion () {
 }
 
 downloadNode4 () {
-  echo "Installing Node 4.0 RC1"
+  echo "Installing Node 4.1 stable"
   mkdir -p D:/home/site/bin
   mkdir -p D:/home/site/bin/node4
-  curl -L -o D:/home/site/bin/node4/node.exe https://nodejs.org/dist/v4.0.0/win-x64/node.exe
-  curl -L -o D:/home/site/bin/node4/node.lib https://nodejs.org/dist/v4.0.0/win-x64/node.lib
+  curl -L -o D:/home/site/bin/node4/node.exe https://nodejs.org/dist/v4.1.0/win-x64/node.exe
+  curl -L -o D:/home/site/bin/node4/node.lib https://nodejs.org/dist/v4.1.0/win-x64/node.lib
 
   NODE_EXE=D:/home/site/bin/node4/node.exe
 }
@@ -114,7 +114,7 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
   exitWithMessageOnError "Kudu Sync failed"
 fi
 
-# 2. Kudu's default Node selection, followed by 4.0 (RC) installation
+# 2. Kudu's default Node selection, followed by 4.1 stable installation
 selectNodeVersion
 downloadNode4
 
